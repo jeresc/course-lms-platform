@@ -1,0 +1,22 @@
+{
+  "extends": ["next/core-web-vitals", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "overrides": [
+    {
+      "files": ["*.{ts,tsx}"],
+      "excludedFiles": ["next.config.js"],
+      "extends": ["standard-with-typescript"],
+      "rules": {
+        "@typescript-eslint/comma-dangle": "off",
+        "@typescript-eslint/space-before-function-paren": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "multiline-ternary": "off"
+      }
+    }
+  ]
+}
